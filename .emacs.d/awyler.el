@@ -36,6 +36,16 @@
 (require 'saveplace)
 (setq-default save-place t)
 
+; Turn off vc-git -- load time is TOO DAMN HIGH
+(require 'vc)
+(remove-hook 'find-file-hooks 'vc-find-file-hook)
+(setq vc-handled-backends nil)
+
+; Force meta to option key on mac
+(condition-case nil
+		(setq mac-option-modifier 'meta)
+	(error "Seting mac-option-modifier failed"))
+
 ; Ido
 (require 'ido)
 (setq ido-enable-flex-matching t)
