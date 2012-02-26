@@ -1,0 +1,7 @@
+[core]
+	editor = emacsclient
+[color]
+ 	ui = true
+[user]
+    name = Alex Wyler
+    email = alex.s.wyler@gmail.com

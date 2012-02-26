@@ -1,0 +1,14 @@
+#
+# Config Stuff -- source .customrc
+#
+
+export EDITOR=emacsclient
+alias ab="arc build"
+alias gs="git status"
+alias gr="git fetch; git rebase trunk"
+alias gc="git commit -a"
+alias ga="gc --amend -C HEAD"
+alias ad="ga; arc diff"
+alias au="ga; arc unit"
+alias gb="git checkout HEAD^"
+alias e="aquamacs"

@@ -1,0 +1,25 @@
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=336858776342922";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<b> HTML 5 </b>
+<div class="fb-like" data-href="https://www.facebook.com/pages/BadgerBitescom/130374091742" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+
+<b> IFRAME </b>
+<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FBadgerBitescom%2F130374091742&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=verdana&amp;height=21&amp;appId=336858776342922" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:450px; height:21px;" allowTransparency="true"></iframe>
+
+<b> XFBML </b>
+<fb:like href="https://www.facebook.com/pages/BadgerBitescom/130374091742" send="false" layout="button_count" width="450" show_faces="false" font="verdana"></fb:like>
+
+</body>
+</html>
