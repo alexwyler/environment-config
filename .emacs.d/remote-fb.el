@@ -67,8 +67,8 @@
       (cons '("\\.php$" . xhp-mode) auto-mode-alist))
 
 ;; todo
-;; (add-hook 'php-mode-hook '(lambda () (flymake-mode 1)))
-;; (global-set-key [f13] 'flymake-mode)
+(add-hook 'php-mode-hook '(lambda () (flymake-mode 1)))
+ (global-set-key [f13] 'flymake-mode)
 
 (require 'vc)
 (remove-hook 'find-file-hooks 'vc-find-file-hook)
