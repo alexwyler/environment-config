@@ -27,6 +27,7 @@
 
 ; 2-space indentation
 (setq default-tab-width 2)
+(setq js-indent-level 2)
 (setq c-basic-offset 2)
 
 ; No large file warning
@@ -55,6 +56,13 @@
   (error
    (message "Failed to set start ido-mode")))
 
+; unique buffer names using path
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'reverse)
+(setq uniquify-separator "|")
+(setq uniquify-after-kill-buffer-p t)
+(setq uniquify-ignore-buffers-re "^\\*")
+
 ; Mouse clicks
 (global-set-key
  [mouse-1]
@@ -72,6 +80,10 @@
 (global-set-key (kbd "C-<up>") 'backward-paragraph)
 (global-set-key (kbd "C-<down>") 'forward-paragraph)
 
+; flymake on php
+(add-hook 'php-mode-hook '(lambda () (flymake-mode 1)))
+(global-set-key [f13] 'flymake-mode)
+
 ; As much as I love the splash screen...
 (setq inhibit-splash-screen t)
 
@@ -81,6 +93,15 @@
 ; Auto revert-buffer
 (global-auto-revert-mode t)
 (setq auto-revert-verbose nil)
+
+; show trailing whitespace ...
+(set-face-background 'trailing-whitespace "#900000")
+(setq-default show-trailing-whitespace t)
+; ... and terminate with extreme prejudice
+(defun delete-trailing-whitespace-sometimes () ""
+  (if (not (eq major-mode 'diff-mode))
+      (delete-trailing-whitespace)))
+(add-hook 'write-file-hooks 'delete-trailing-whitespace-sometimes)
 
 ; copy-paste over X
 (setq x-select-enable-clipboard t)
