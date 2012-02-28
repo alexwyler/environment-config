@@ -1,3 +1,4 @@
-This is a bunch of unorganized stuff in my home directory.  It's on github so I can access it anywhere!  Maybe now that it's public, i'll be incentivized to organize it.
+This is a bunch of stuff in my home directory.  It's on github so I can access it anywhere!  Maybe now that it's public, i'll be incentivized to organize it.
 
-Emacs customization in .emacs.d/awyler.el
+.emacs.d/awyler.el       -- Emacs customization
+.emacs.d/fb/remote-fb.el -- Config for facebook dev over sshfs
