@@ -26,6 +26,7 @@
 (setq column-number-mode t)
 
 ; 2-space indentation
+(setq-default indent-tabs-mode nil)
 (setq default-tab-width 2)
 (setq js-indent-level 2)
 (setq c-basic-offset 2)
@@ -79,10 +80,6 @@
 ; Make cheating with arrow keys easier
 (global-set-key (kbd "C-<up>") 'backward-paragraph)
 (global-set-key (kbd "C-<down>") 'forward-paragraph)
-
-; flymake on php
-(add-hook 'php-mode-hook '(lambda () (flymake-mode 1)))
-(global-set-key [f13] 'flymake-mode)
 
 ; As much as I love the splash screen...
 (setq inhibit-splash-screen t)
