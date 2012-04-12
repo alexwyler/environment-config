@@ -82,19 +82,21 @@
     "\"")))
 
 ;(pfff-flymake-mode nil)
-; (load-library "~/.emacs.d/fb/pfff-flymake.el")
+(load-library "~/.emacs.d/fb/remote-pfff-flymake.el")
 ; override pfff-flymake with some customizations
-;(add-hook 'php-mode-hook
-;          (lambda ()
-;            (c-set-style "fb-php-style")
-;            (set-variable 'comment-start "//")
-;            (set-variable 'comment-end "")
-;            (highlight-80+-mode t)
-;            ; php-mode.el disables this, but that conflicts with arc lint
-;            (set (make-local-variable 'require-final-newline) t)
-;            (pfff-flymake-mode t)
-;            ))
-;(autoload 'pfff-flymake-mode "pfff-flymake" nil t nil)
-; TODO: cleanup devtools stuff
-; (load-library "~/.emacs.d/fb/devtools.el")
+(add-hook
+ 'php-mode-hook
+ (lambda ()
+   (c-set-style "fb-php-style")
+   (set-variable 'comment-start "//")
+   (set-variable 'comment-end "")
+   (highlight-80+-mode t)
+   ;; php-mode.el disables this, but that conflicts with arc lint
+   (set (make-local-variable 'require-final-newline) t)
+   (pfff-flymake-mode t)
+   ))
+(autoload 'pfff-flymake-mode "pfff-flymake" nil t nil)
+
+;; TODO: cleanup devtools stuff
+;; (load-library "~/.emacs.d/fb/devtools.el")
 
