@@ -125,7 +125,7 @@
 (set-face-foreground 'minibuffer-prompt "#F5F24E")
 
 ; Font
-(set-face-attribute 'default nil :family "consolas" :height 130)
+(set-face-attribute 'default nil :family "consolas" :height 150)
 
 ; pretty colors in eshell
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
