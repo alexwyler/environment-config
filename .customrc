@@ -2,11 +2,13 @@
 # Config Stuff -- source .customrc
 #
 
-export EDITOR=emacsclient
+export EDITOR="subl -w"
+export GIT_EDITOR="subl -w"
 alias ab="arc build"
 alias gs="git status"
 alias gr="git fetch; git rebase trunk"
 alias gc="git commit -a"
+alias gco="git checkout"
 alias ga="gc --amend -C HEAD"
 alias ad="ga; arc diff"
 alias au="ga; arc unit"
