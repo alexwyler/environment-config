@@ -4,6 +4,7 @@
 
 export EDITOR="subl -w"
 export GIT_EDITOR="subl -w"
+export PATH="$PATH:~/arcanist/bin:~/bin"
 alias ab="arc build"
 alias gs="git status"
 alias gr="git fetch; git rebase trunk"
